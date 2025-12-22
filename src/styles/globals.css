@@ -1,0 +1,222 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-neutral-800 bg-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-secondary-800;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  /* ========== BUTTON COMPONENTS ========== */
+  
+  /* Primary Button - Main CTA */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-primary-600 text-white
+           hover:bg-primary-700 hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           active:bg-primary-800 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  /* Primary Button - Large */
+  .btn-primary-lg {
+    @apply btn-primary px-8 py-4 text-lg;
+  }
+  
+  /* Primary Button - Small */
+  .btn-primary-sm {
+    @apply btn-primary px-4 py-2 text-sm;
+  }
+  
+  /* Secondary Button - Outline */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           border-2 border-primary-600 text-primary-600
+           hover:bg-primary-50 hover:border-primary-700 hover:text-primary-700
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           active:bg-primary-100 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  /* Secondary Button - Ghost */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           text-primary-600
+           hover:bg-primary-50 hover:text-primary-700
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           active:bg-primary-100 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  /* Accent Button - For highlights */
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-accent-500 text-white
+           hover:bg-accent-600 hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2
+           active:bg-accent-700 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  /* Success Button */
+  .btn-success {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-success-500 text-white
+           hover:bg-success-600 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-success-500 focus:ring-offset-2
+           active:bg-success-700 active:scale-95;
+  }
+  
+  /* Warning Button */
+  .btn-warning {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-warning-500 text-white
+           hover:bg-warning-600 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-warning-500 focus:ring-offset-2
+           active:bg-warning-700 active:scale-95;
+  }
+  
+  /* Error/Danger Button */
+  .btn-error {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-error-500 text-white
+           hover:bg-error-600 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-error-500 focus:ring-offset-2
+           active:bg-error-700 active:scale-95;
+  }
+  
+  /* Dark Button */
+  .btn-dark {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-secondary-800 text-white
+           hover:bg-secondary-900 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2
+           active:bg-secondary-950 active:scale-95;
+  }
+  
+  /* White Button */
+  .btn-white {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-white text-secondary-800 shadow-sm
+           hover:bg-gray-50 hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2
+           active:bg-gray-100 active:scale-95;
+  }
+  
+  /* Gradient Button */
+  .btn-gradient {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold 
+           transition-all duration-300 ease-out
+           bg-gradient-to-r from-primary-600 to-accent-500 text-white
+           hover:from-primary-700 hover:to-accent-600 hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           active:from-primary-800 active:to-accent-700 active:scale-95;
+  }
+  
+  /* Button with Icon */
+  .btn-icon {
+    @apply inline-flex items-center justify-center gap-2;
+  }
+  
+  /* Button Full Width */
+  .btn-block {
+    @apply w-full justify-center;
+  }
+  
+  /* ========== BADGE COMPONENTS ========== */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  
+  .badge-primary {
+    @apply bg-primary-100 text-primary-800;
+  }
+  
+  .badge-secondary {
+    @apply bg-secondary-100 text-secondary-800;
+  }
+  
+  .badge-accent {
+    @apply bg-accent-100 text-accent-800;
+  }
+  
+  .badge-success {
+    @apply bg-success-100 text-success-800;
+  }
+  
+  .badge-warning {
+    @apply bg-warning-100 text-warning-800;
+  }
+  
+  .badge-error {
+    @apply bg-error-100 text-error-800;
+  }
+  
+  /* ========== CARD COMPONENTS ========== */
+  .card {
+    @apply bg-white rounded-xl shadow-lg border border-gray-200 p-6;
+  }
+  
+  .card-hover {
+    @apply card transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+  }
+  
+  /* ========== FORM COMPONENTS ========== */
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg 
+           focus:ring-2 focus:ring-primary-500 focus:border-transparent 
+           transition-all duration-200;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+  
+  /* ========== SECTION STYLES ========== */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
