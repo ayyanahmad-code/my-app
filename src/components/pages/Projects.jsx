@@ -10,7 +10,7 @@ import MoreProjectsSection from './Project/MoreProjectsSection';
 import Railway from "../../Images/Railway-1.avif";
 import Image  from "../../Images/Project-7.avif";
 import Transformer from "../../Images/Transformer.avif";
-import Converter from "../../Images/Converter.avif";
+import Converter from "../../Images/converter.avif";
 import Machinery  from "../../Images/Machinery.avif";
 import Design from "../../Images/Design.avif";
 
