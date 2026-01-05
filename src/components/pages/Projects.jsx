@@ -12,7 +12,7 @@ import Image  from "../../Images/Project-7.avif";
 import Transformer from "../../Images/Transformer.avif";
 import Converter from "../../Images/converter.avif";
 import Machinery  from "../../Images/Machinery.avif";
-import Design from "../../Images/Design.avif";
+import Design from "../../Images/ProductDesign.avif";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
