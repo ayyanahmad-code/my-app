@@ -9,7 +9,7 @@ const IndustriesWeServe = () => {
     { name: 'Heavy Engineering', icon: '🏗️', count: 150 },
     { name: 'Industrial Engineering', icon: '⚙️', count: 95 },
     { name: 'Power & Energy', icon: '⚡', count: 75 },
-    { name: 'Consumer Goods', icon: '📦', count: 110 }
+    { name: 'Precast', icon: '🗃️', count: 110 }
   ];
 
   const containerVariants = {
